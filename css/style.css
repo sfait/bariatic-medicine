@@ -56,6 +56,17 @@ body {
     width: 1px;
 }
 
+main {
+    display: flex;
+}
+
+.left-content {
+    width: 90%;
+}
+.right-content {
+    height: 10%;
+}
+
 .second-header {
     display: none;
 }
@@ -87,9 +98,31 @@ body {
 }
 
 .hero-paragraph {
-    padding: 0 0.5rem;
     color: var(--red-color);
     font-size: 1.5rem;
+}
+
+.attencion-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attencion-icon {
+    color: var(--red-color);
+    font-size: 3rem;
+    transform: rotate(-15deg);
+    margin-right: 1rem;
+}
+
+.attencion-paragraph {
+    color: var(--red-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.attencion-span {
+    color: var(--black-color);
 }
 
 /* text-content */
