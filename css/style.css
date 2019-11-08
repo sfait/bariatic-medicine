@@ -3,7 +3,8 @@
     --black-color: #000;
     --white-color: #fff;
     --red-color: #90290f;
-    /* --blue-color: #0a0315; */
+    --yellow-color: #fbf5b7;
+    --green-color: #447f23;
     --gray-color: #d9dcdf;
     --background-color: rgba(0, 0, 0, 0.4);
 }
@@ -115,6 +116,76 @@ body {
 .paragraph-cursive {
     font-style: italic;
 }
+
+.text-content-figure {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--gray-color);
+}
+
+.text-content-figure-photo {
+    width: 100%;
+}
+
+.text-content-figure-figcaption {
+    background: var(--yellow-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-content-mark {
+    font-size: 1.2rem;
+    color: var(--red-color);
+    font-weight: bold;
+}
+
+.text-content-photo-baner {
+    width: 100%;
+}
+
+.text-content-second-mark {
+    background: var(--green-color);
+    color: var(--yellow-color);
+    font-weight: bold;
+}
+
+.text-content-second-list {
+    padding: 0;
+    font-weight: bold;
+}
+
+.text-content-second-list li {
+    margin-left: 1rem;
+}
+
+.text-content-second-list-paragraph {
+    font-weight: normal;
+}
+
+.text-content-third-list {
+    list-style: none;
+}
+
+.text-content-third-list {
+    padding: 0;
+    list-style: none;
+}
+
+.text-content-third-list li {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.text-content-third-list li::before {
+    content: "➤";
+    color: var(--green-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -1.5rem;
+}
+
 
 /* media queries*/
 @media only screen and (min-width: 768px) {
