@@ -1,5 +1,5 @@
 function changeTitle() {
-    const message = "Wróć na Bariatic Medicine";
+    const message = "Return to the website";
     let original;
 
     window.addEventListener("focus", function() {
