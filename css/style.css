@@ -8,6 +8,7 @@
     --green-color: #447f23;
     --second-green-color: #fafcf0;
     --gray-color: #d9dcdf;
+    --second-gray-color: #f5f5f5;
     --background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -190,6 +191,7 @@ body {
 .text-content-third-list li {
     margin-left: 1.5rem;
     margin-bottom: 0.5rem;
+    text-indent: 5px;
     position: relative;
 }
 
@@ -251,8 +253,16 @@ body {
 }
 
 /* product */
+.product {
+    margin-bottom: 3rem;
+}
+
 .product-wrapper {
     text-align: center;
+}
+
+.product-paragraph {
+    padding: 0 0.5rem;
 }
 
 .product-span {
@@ -297,7 +307,28 @@ body {
     font-weight: normal;
 }
 
+.product-s {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.product-second-span {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 /* form */
+.form {
+    padding: 0;
+}
+
+.form-wrapper {
+    padding: 0 1.5rem;
+    border: 0.5px solid var(--gray-color);
+    background: var(--second-gray-color);
+    box-shadow: 0 0 20px var(--gray-color);
+}
+
 .form-second-header {
     width: 100%;
     color: var(--green-color);
@@ -307,7 +338,7 @@ body {
 .form-second-header::after {
     content: "";
     width: 98%;
-    border-bottom: 0.5px solid var(--gray-color);
+    border-bottom: 1.5px solid var(--gray-color);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -316,6 +347,47 @@ body {
 
 .form-third-header {
     color: var(--brown-color);
+}
+
+.form-item {
+    margin-bottom: 1rem;
+}
+
+.input-box {
+    width: 100%;
+    position: relative;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--gray-color);
+}
+
+.question-sign {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--gray-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    margin-top: 0.9rem;
+    right: 0;
+    margin-right: 0.5rem;
+    cursor: default;
+}
+
+.form-span {
+    font-size: 0.8rem;
 }
 
 /* media queries*/
@@ -355,5 +427,9 @@ body {
     .promotion-days-paragraph {
         width: 15%;
         margin-left: -5rem;
+    }
+
+    .form {
+        padding: 0 0.5rem;
     }
 }
