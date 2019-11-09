@@ -2,9 +2,11 @@
 :root {
     --black-color: #000;
     --white-color: #fff;
-    --red-color: #90290f;
+    --brown-color: #90290f;
+    --red-color: #db3318;
     --yellow-color: #fbf5b7;
     --green-color: #447f23;
+    --second-green-color: #fafcf0;
     --gray-color: #d9dcdf;
     --background-color: rgba(0, 0, 0, 0.4);
 }
@@ -38,12 +40,6 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
 .sr-only {
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -56,15 +52,19 @@ body {
     width: 1px;
 }
 
-main {
+.main {
     display: flex;
 }
 
 .left-content {
-    width: 90%;
+    width: 100%;
 }
+
 .right-content {
-    height: 10%;
+    width: 0%;
+    height: 100%;
+    background: yellow;
+    display: none;
 }
 
 .second-header {
@@ -89,7 +89,7 @@ main {
 
 .header-photo {
     width: 100%;
-    border: 1px solid var(--red-color);
+    border: 1px solid var(--brown-color);
 }
 
 /* hero */
@@ -98,31 +98,8 @@ main {
 }
 
 .hero-paragraph {
-    color: var(--red-color);
+    color: var(--brown-color);
     font-size: 1.5rem;
-}
-
-.attencion-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.attencion-icon {
-    color: var(--red-color);
-    font-size: 3rem;
-    transform: rotate(-15deg);
-    margin-right: 1rem;
-}
-
-.attencion-paragraph {
-    color: var(--red-color);
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.attencion-span {
-    color: var(--black-color);
 }
 
 /* text-content */
@@ -166,10 +143,13 @@ main {
     text-align: center;
 }
 
-.text-content-mark {
+.text-content-mark, .text-content-second-mark {
     font-size: 1.2rem;
-    color: var(--red-color);
     font-weight: bold;
+}
+
+.text-content-mark {
+    color: var(--red-color);
 }
 
 .text-content-photo-baner {
@@ -179,7 +159,10 @@ main {
 .text-content-second-mark {
     background: var(--green-color);
     color: var(--yellow-color);
-    font-weight: bold;
+}
+
+.mark-span {
+    text-transform: uppercase;
 }
 
 .text-content-second-list {
@@ -219,6 +202,121 @@ main {
     margin-left: -1.5rem;
 }
 
+.attencion-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attencion-icon {
+    color: var(--red-color);
+    font-size: 3rem;
+    transform: rotate(-15deg);
+    margin-right: 1rem;
+}
+
+.attencion-paragraph {
+    color: var(--red-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.attencion-span {
+    color: var(--black-color);
+}
+
+.bordered-box {}
+
+.signature-wrapper {
+    width: 100%;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.signature-photo {
+    width: 60%;
+    padding-right: 0;
+}
+
+.signature-paragraph {
+    padding: 0;
+}
+
+.signature-abbr[title] {
+    text-decoration: none;
+    cursor: default;
+}
+
+/* product */
+.product-wrapper {
+    text-align: center;
+}
+
+.product-span {
+    color: var(--red-color);
+}
+
+.product-photo-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-photo-box {
+    width: 80%;
+    position: relative;
+}
+
+.product-photo {
+    width: 80%;
+    z-index: 0;
+}
+
+.sign-photo {
+    width: auto;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    margin-left: 60%;
+    bottom: 5%;
+}
+
+.promotion-days-paragraph {
+    width: 100%;
+    font-weight: bold;
+    margin-left: 0;
+    z-index: 1;
+}
+
+.promotion-days-counter {
+    font-size: 5rem;
+    font-weight: normal;
+}
+
+/* form */
+.form-second-header {
+    width: 100%;
+    color: var(--green-color);
+    position: relative;
+}
+
+.form-second-header::after {
+    content: "";
+    width: 98%;
+    border-bottom: 0.5px solid var(--gray-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 1%;
+}
+
+.form-third-header {
+    color: var(--brown-color);
+}
 
 /* media queries*/
 @media only screen and (min-width: 768px) {
@@ -226,7 +324,36 @@ main {
         background: var(--gray-color);
     }
 
+    .left-content {
+        width: 70%;
+    }
+
+    .right-content {
+        width: 30%;
+        display: block;
+    }
+
     .hero-wrapper {
         padding: 0.5rem 0.5rem 3rem;
+    }
+
+    .signature-photo {
+        width: 50%;
+        padding-right: 1rem;
+    }
+
+    .product-photo-wrapper {
+        flex-direction: row;
+    }
+
+    .sign-photo {
+        width: 15%;
+        height: 20%;
+        margin-left: 10%;
+    }
+
+    .promotion-days-paragraph {
+        width: 15%;
+        margin-left: -5rem;
     }
 }
