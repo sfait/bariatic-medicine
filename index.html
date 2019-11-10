@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="js/app.js"></script>
 </head>
 
@@ -40,7 +39,7 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ducimus minima voluptatem inventore, dolor deleniti, saepe pariatur quos deserunt, rem iste, tempora officia possimus neque eveniet repudiandae porro natus
                         expedita. Accusamus iure, quasi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, beatae! Lorem ipsum dolor sit amet.
                     </p>
-                    <h3 class="third-header"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta explicabo omnis odio dolores dolorum unde, fugit maiores:</h3>
+                    <h3 class="third-header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta explicabo omnis odio dolores dolorum unde, fugit maiores:</h3>
                     <ul class="text-content-list">
                         <li>
                             <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit. Quod id debitis, velit hic repellat, eveniet maiores, illo nam cupiditate asperiores laborum fugiat reprehenderit fugit odit. Error unde vel ex
@@ -302,7 +301,7 @@
                 </div>
             </section>
             <section class="product">
-                <h2 class="second-header">Produkt</h2>
+                <h2 class="second-header">Lorem ipsum.</h2>
                 <div class="product-wrapper">
                     <p class="product-paragraph">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, beatae.
@@ -340,7 +339,7 @@
                                 <input type="email" placeholder="mail@domain" id="email" class="form-input" required />
                                 <div class="question-sign-wrapper">
                                     <div class="tooltip">
-                                        Tooltip 1
+                                        Format: name@gmail.com
                                     </div>
                                     <div class="question-sign">
                                         &#63;
@@ -352,10 +351,10 @@
                         <div class="form-item">
                             <label for="phone" class="form-label">Phone number:</label>
                             <div class="input-box">
-                                <input type="tel" placeholder="123 4567" id="phone" class="form-input" required />
+                                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="123 4567" id="phone" class="form-input" required />
                                 <div class="question-sign-wrapper">
                                     <div class="tooltip">
-                                        Tooltip 2
+                                        Format: 123-456-7890
                                     </div>
                                     <div class="question-sign">
                                         &#63;
@@ -364,6 +363,44 @@
                             </div>
                             <span class="form-span">(necessary for shippment)</span>
                         </div>
+                        <div class="form-item">
+                            <label for="name" class="form-label">Firstname and lastname:</label>
+                            <input type="text" placeholder="firstname and lastname..." id="name" class="form-input" />
+                        </div>
+                        <div class="form-item">
+                            <label for="adress" class="form-label">Adress:</label>
+                            <input type="text" placeholder="street number of house and flat..." id="adress" class="form-input" />
+                        </div>
+                        <div class="form-item">
+                            <label for="zipcode city" class="form-label">Postal code and City:</label>
+                            <div class="zipcode-city-inputs">
+                                <input type="text" pattern="[0-9]{2}-[0-9]{3}" placeholder="postal code" id="zipcode" class="form-input zipcode-input" />
+                                <input type="text" placeholder="city..." id="city" class="form-input city-input" />
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label for="country" class="form-label">Country:</label>
+                            <select id="country" class="form-input">
+                                <option value="poland">Polska</option>
+                                <option value="usa">Stany Zjednoczone</option>
+                                <option value="italy">Włochy</option>
+                            </select>
+                        </div>
+                        <div class="form-payment">
+                            <label for="payment" class="form-label">Payment method</label>
+                            <br /><span class="payment-span">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, earum.</span>
+                        </div>
+                        <button class="form-btn">Buy</button>
+                        <table class="form-table">
+                            <tr>
+                                <th scope="row" class="table-header">to pay</th>
+                                <td class="table-col table-pay">99 &#36;</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-header">shipping</th>
+                                <td class="table-col table-shipping">free</td>
+                            </tr>
+                        </table>
                     </form>
                 </div>
             </section>

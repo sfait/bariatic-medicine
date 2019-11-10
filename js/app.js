@@ -31,44 +31,9 @@ function showTooltip() {
             tooltip.classList.remove("show-tooltip");
         })
     }
-
 }
 
-// function useScrollReveal() {
-//     const slideLeft = {
-//         distance: "150%",
-//         origin: "left",
-//         delay: "250",
-//         opacity: null
-//     };
-//
-//     const slideRight = {
-//         distance: "150%",
-//         origin: "right",
-//         delay: "250",
-//         opacity: null
-//     };
-//
-//     ScrollReveal().reveal(".second-header, .hero-paragraph, .description-text, .gallery-wrapper, .footer-wrapper", { delay: 300 });
-//     ScrollReveal().reveal(".environment-text", slideLeft);
-//     ScrollReveal().reveal(".the-senses-text, .food-text", slideRight);
-// }
-//
-// function showAnimations() {
-//     const mobile = window.matchMedia("screen and (min-width: 1000px)");
-//
-//     if (mobile.matches) {
-//         useScrollReveal();
-//     }
-//
-//     mobile.addListener( function(mobile) {
-//         if (mobile.matches) {
-//             useScrollReveal();
-//         }
-//     });
-// };
-
-const init = () => {
+const init = function() {
     changeTitle();
     showTooltip();
 }

@@ -7,21 +7,15 @@
     --yellow-color: #fbf5b7;
     --green-color: #447f23;
     --second-green-color: #fafcf0;
+    --third-green-color: #447F50;
     --gray-color: #d9dcdf;
     --second-gray-color: #f5f5f5;
     --background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* general */
-* {
+*, *::before, *::after {
     box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -417,6 +411,63 @@ body {
     font-size: 0.8rem;
 }
 
+.zipcode-city-inputs {
+    display: flex;
+}
+
+.zipcode-input {
+    width: 50%;
+    margin-right: 0.5rem;
+}
+
+.city-input {
+    width: 50%;
+}
+
+.payment-span {
+    font-size: 0.8rem;
+}
+
+.form-btn {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    color: var(--white-color);
+    background: var(--green-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.6s;
+}
+
+.form-btn:hover {
+    background: var(--third-green-color);
+}
+
+/* form table */
+.form-table, .table-header, .table-col {
+    border: 1px solid var(--black-color);
+    padding: 0.2rem 0.5rem;
+}
+
+.form-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table-header {
+    font-weight: normal;
+    text-align: left;
+}
+
+.table-pay {
+    color: var(--green-color);
+}
+
+.table-shipping {
+    color: var(--brown-color);
+}
+
 /* media queries*/
 @media only screen and (min-width: 768px) {
     body {
@@ -458,5 +509,13 @@ body {
 
     .form {
         padding: 0 0.5rem;
+    }
+
+    .zipcode-input {
+        width: 20%;
+    }
+
+    .city-input {
+        width: 80%;
     }
 }
