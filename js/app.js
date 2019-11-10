@@ -1,22 +1,3 @@
-function changeTitle() {
-    const message = "Return to the website";
-    let original;
-
-    window.addEventListener("focus", function() {
-        if (original) {
-            document.title = original;
-        }
-    })
-
-    window.addEventListener("blur", function() {
-        const title = document.title;
-        if (title != message) {
-            original = title;
-        }
-        document.title = message;
-    })
-}
-
 function showTooltip() {
     const questionSigns = document.querySelectorAll(".question-sign-wrapper");
 
@@ -33,9 +14,27 @@ function showTooltip() {
     }
 }
 
+function sendForm() {
+    const btn = document.querySelector(".form-btn");
+
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+
+
+
+        // alert("Wysłano formularz");
+
+        // console.log(email);
+        // console.log(phone);
+    })
+}
+
 const init = function() {
-    changeTitle();
     showTooltip();
+    sendForm();
 }
 
 document.addEventListener("DOMContentLoaded", init);
