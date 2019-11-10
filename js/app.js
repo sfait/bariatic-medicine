@@ -14,27 +14,8 @@ function showTooltip() {
     }
 }
 
-function sendForm() {
-    const btn = document.querySelector(".form-btn");
-
-    btn.addEventListener("click", function(e) {
-        e.preventDefault();
-
-        const email = document.getElementById("email").value;
-        const phone = document.getElementById("phone").value;
-
-
-
-        // alert("Wysłano formularz");
-
-        // console.log(email);
-        // console.log(phone);
-    })
-}
-
 const init = function() {
     showTooltip();
-    sendForm();
 }
 
 document.addEventListener("DOMContentLoaded", init);
