@@ -4,6 +4,7 @@
     --white-color: #fff;
     --brown-color: #90290f;
     --red-color: #db3318;
+    --second-red-color: #bf4447;
     --yellow-color: #fbf5b7;
     --green-color: #447f23;
     --second-green-color: #fafcf0;
@@ -58,7 +59,7 @@ body {
 .right-content {
     width: 0%;
     height: 100%;
-    background: yellow;
+    padding: 0.5rem 0 0.5rem 2rem;
     display: none;
 }
 
@@ -469,7 +470,66 @@ body {
     color: var(--brown-color);
 }
 
+/* aside */
+.aside {
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
 
+.aside-photo-box {
+    width: 100%;
+    position: relative;
+}
+
+.aside-photo {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.aside-photo-kilo {
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white-color);
+    background: var(--green-color);
+    border-radius: 5px;
+    box-shadow: 0 0 20px var(--gray-color);
+    transform: rotate(10deg);
+    position: absolute;
+    right: 0;
+    margin-right: -5px;
+    bottom: 0;
+    margin-bottom: -5px;
+}
+
+.aside-header {
+    margin: 0.5rem 2rem;
+    color: var(--second-red-color);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.aside-paragraph {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.star-rating-wrapper {
+    margin-bottom: 0.5rem;
+}
+
+.star-icon {
+    color: var(--green-color);
+}
 
 
 /* footer */
@@ -524,18 +584,28 @@ body {
 }
 
 /* media queries*/
-@media only screen and (min-width: 768px) {
-    body {
-        background: var(--gray-color);
-    }
-
+@media only screen and (min-width: 991px) {
     .left-content {
-        width: 70%;
+        width: 75%;
     }
 
     .right-content {
-        width: 30%;
+        width: 25%;
         display: block;
+    }
+
+    .footer-links {
+        width: 75%;
+    }
+
+    .footer-empty-box {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background: var(--gray-color);
     }
 
     .hero-wrapper {
@@ -547,14 +617,14 @@ body {
         padding-right: 1rem;
     }
 
-    .product-photo-wrapper {
-        flex-direction: row;
-    }
-
     .sign-photo {
         width: 15%;
         height: 20%;
         margin-left: 10%;
+    }
+
+    .product-photo-wrapper {
+        flex-direction: row;
     }
 
     .promotion-days-paragraph {
@@ -572,13 +642,5 @@ body {
 
     .city-input {
         width: 80%;
-    }
-
-    .footer-links {
-        width: 70%;
-    }
-
-    .footer-empty-box {
-        display: block;
     }
 }
