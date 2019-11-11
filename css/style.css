@@ -542,6 +542,7 @@ body {
 .aside-photo-box {
     width: 100%;
     height: auto;
+    max-height: 220px;
     position: relative;
     margin-bottom: 1rem;
 }
