@@ -1,5 +1,8 @@
 # bariatic-medicine
-Webiste Bariatic Medicine (version HTML, CSS, JavaScript)
+Webiste Bariatic Medicine - recruitment task.
+
+![alt "desktop template"](https://github.com/sfait/bariatic-medicine/blob/master/img/desktop.png "desktop template")
+![alt "mobile template"](https://github.com/sfait/bariatic-medicine/blob/master/img/mobile.png "mobile template")
 
 **Technologies:**
 * HTML
